@@ -8,19 +8,19 @@ public class Coin : MonoBehaviour {
     public float ySpeed = 0f;
     public float zSpeed = 0f;
 
-    void OnTouchDown()
+    public void OnTouchDown()
     {
         xSpeed = 0f;
     }
-    void OnTouchUp()
+    public void OnTouchUp()
     {
         xSpeed = 5f;
     }
-    void OnTouchStay()
+    public void OnTouchStay()
     {
         xSpeed = 0f;
     }
-    void OnTouchExit()
+    public void OnTouchExit()
     {
         xSpeed = 5f;
     }
