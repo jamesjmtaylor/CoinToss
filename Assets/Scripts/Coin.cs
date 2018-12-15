@@ -40,8 +40,8 @@ public class Coin : MonoBehaviour {
         var xRotation = transform.rotation.eulerAngles.x;
         if (!isFlipping)
         {
-            if ((xRotation > -5 && xRotation < 5) ||
-                (xRotation > 175 && xRotation < 185))
+            if ((xRotation > 355 || xRotation < 5) ||
+                (xRotation > 180 && xRotation < 185))
             {
                 xSpeed = 0;
             }
