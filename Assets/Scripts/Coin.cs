@@ -3,31 +3,53 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Coin : MonoBehaviour {
-    //sppeed in degrees of rotation per frame
-    public float xSpeed = 5f;
+    //speed in degrees of rotation per frame
+    public float flipSpeed = 10f;
+    public float xSpeed = 10f;
     public float ySpeed = 0f;
     public float zSpeed = 0f;
 
-    public void OnTouchDown()
+
+    //MARK: - Touch Events
+    void OnTouchDown()
     {
-        xSpeed = 0f;
+        SwitchCoin();
     }
-    public void OnTouchUp()
+    void OnTouchUp()
     {
-        xSpeed = 5f;
+        //Do nothing
     }
-    public void OnTouchStay()
+    void OnTouchStay()
     {
-        xSpeed = 0f;
+        //Do nothing
     }
-    public void OnTouchExit()
+    void OnTouchExit()
     {
-        xSpeed = 5f;
+        //Do nothing
+    }
+
+    //MARK: - Coin flip
+    private bool isFlipping = true;
+    public void SwitchCoin()
+    {
+        isFlipping = !isFlipping;
     }
 
     // Update is called once per frame
     void Update () {
-        transform.Rotate(xSpeed,ySpeed,zSpeed);
+        var xRotation = transform.rotation.eulerAngles.x;
+        if (!isFlipping)
+        {
+            if ((xRotation > -5 && xRotation < 5) ||
+                (xRotation > 175 && xRotation < 185))
+            {
+                xSpeed = 0;
+            }
+        }
+        else
+        {
+            xSpeed = flipSpeed;
+        }
+        transform.Rotate(xSpeed, ySpeed, zSpeed); 
     }
-    
 }

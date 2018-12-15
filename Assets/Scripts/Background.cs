@@ -8,18 +8,18 @@ public class Background : MonoBehaviour {
 
     void OnTouchDown()
     {
-        coin.OnTouchDown();
+        coin.SwitchCoin();
     }
     void OnTouchUp()
     {
-        coin.OnTouchUp();
+        //Do nothing
     }
     void OnTouchStay()
     {
-        coin.OnTouchStay();
+        //Do nothing
     }
     void OnTouchExit()
     {
-        coin.OnTouchExit();
+        //Do nothing
     }
 }
