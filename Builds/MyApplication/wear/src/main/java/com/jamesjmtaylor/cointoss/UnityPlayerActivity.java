@@ -26,33 +26,33 @@ public class UnityPlayerActivity extends Activity
         setContentView(mUnityPlayer);
         mUnityPlayer.requestFocus();
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        ShapeWear.setOnShapeChangeListener(new ShapeWear.OnShapeChangeListener() {
-            @Override
-            public void shapeDetected(ShapeWear.ScreenShape screenShape) {
-                //There is fine.
-                if(screenShape ==ShapeWear.ScreenShape.OTHER_ROUND )
-                {
-                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-                    System.out.println("ActivityInfo.SCREEN_ORIENTATION_PORTRAIT");
-                }
-                else if(screenShape ==ShapeWear.ScreenShape.MOTO_ROUND )
-                {
-                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-                    System.out.println("ActivityInfo.SCREEN_ORIENTATION_PORTRAIT");
-                }
-                else
-                {
-                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-                    System.out.println("ActivityInfo.SCREEN_ORIENTATION_PORTRAIT");
-                }
-            }
-        });
-        ShapeWear.setOnSizeChangeListener(new ShapeWear.OnSizeChangeListener() {
-            @Override
-            public void sizeDetected(int widthPx, int heightPx) {
-            }
-        });
-        ShapeWear.initShapeWear(this);
+//        ShapeWear.setOnShapeChangeListener(new ShapeWear.OnShapeChangeListener() {
+//            @Override
+//            public void shapeDetected(ShapeWear.ScreenShape screenShape) {
+//                //There is fine.
+//                if(screenShape ==ShapeWear.ScreenShape.OTHER_ROUND )
+//                {
+//                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//                    System.out.println("ActivityInfo.SCREEN_ORIENTATION_PORTRAIT");
+//                }
+//                else if(screenShape ==ShapeWear.ScreenShape.MOTO_ROUND )
+//                {
+//                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//                    System.out.println("ActivityInfo.SCREEN_ORIENTATION_PORTRAIT");
+//                }
+//                else
+//                {
+//                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//                    System.out.println("ActivityInfo.SCREEN_ORIENTATION_PORTRAIT");
+//                }
+//            }
+//        });
+//        ShapeWear.setOnSizeChangeListener(new ShapeWear.OnSizeChangeListener() {
+//            @Override
+//            public void sizeDetected(int widthPx, int heightPx) {
+//            }
+//        });
+//        ShapeWear.initShapeWear(this);
     }
 
     @Override protected void onNewIntent(Intent intent) {
